@@ -5,23 +5,35 @@ import type {
   HfcProps,
 } from "hyper-function-component";
 
-const HFC: HyperFunctionComponent<HTMLButtonElement> = (container, initProps) => {
-  container.innerHTML = `
-      <h1>
-        <div>THIS COMPONENT</div>
-        <div>CAN BE USED IN</div>
-        <div class="brand">
-          <ul>
-            <li>React</li>
-            <li>Vue</li>
-            <li>Hfz</li>
-            <li>Angular</li>
-            <li>WebComponents</li>
-          </ul>
-        </div>
-      </h1>`;
+const HFC: HyperFunctionComponent<HTMLButtonElement> = (
+  container,
+  initProps
+) => {
+  container.classList.add("uiv-button-bmd0z");
 
-  return { changed(props: HfcProps) {}, disconnected() {} };
+  function render(props: HfcProps) {
+    if (props.events.onClick) {
+      container.onclick = props.events.onClick;
+    } else {
+      if (container.onclick) {
+        container.onclick = null;
+      }
+    }
+
+    if (props.slots.default) {
+      props.slots.default(container);
+    } else {
+      container.innerHTML = props.attrs.text || "";
+    }
+  }
+
+  render(initProps);
+  return {
+    changed(props: HfcProps) {
+      render(props);
+    },
+    disconnected() {},
+  };
 };
 
 HFC.tag = "button";

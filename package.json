@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "",
   "homepage": "https://uiverse.io/kirzin/selfish-kangaroo-64",
-  "repository": "",
+  "repository": "https://github.com/hyper-function-components/uiv-button-bmd0z.git",
   "keywords": [],
   "type": "module",
   "scripts": {
@@ -16,5 +16,6 @@
   "devDependencies": {
     "hfcpack": "^2.0.9",
     "hyper-function-component": "^2.1.2"
-  }
+  },
+  "banner": "/imgs/ZxrldiVdaCo.png"
 }
