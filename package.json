@@ -1,0 +1,20 @@
+{
+  "name": "uiv-button-bmd0z",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "",
+  "homepage": "https://uiverse.io/kirzin/selfish-kangaroo-64",
+  "repository": "",
+  "keywords": [],
+  "type": "module",
+  "scripts": {
+    "start": "hfcpack",
+    "build": "hfcpack build",
+    "publish-hfc": "hfcpack publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "hfcpack": "^2.0.9",
+    "hyper-function-component": "^2.1.2"
+  }
+}
